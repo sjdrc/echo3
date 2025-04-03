@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+AutoUpdate-Show-In-Client: true
+OpenIDE-Module: au.com.emblem.echotoolchains
+OpenIDE-Module-Layer: au/com/emblem/echotoolchains/layer.xml
+OpenIDE-Module-Localizing-Bundle: au/com/emblem/echotoolchains/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

@@ -1,0 +1,14 @@
+material=data/EchoLogo.ematerial,Echo
+material=data/MultiStageEchoLogo.ematerial,MultiStageEcho
+material=data/LitEchoLogo.ematerial,LitEcho
+material=data/Kenji.ematerial,Mtl_Kenji
+material=data/EchoLogoInternalGlow.ematerial,EchoInternalGlow
+material=data/BasicShader.ematerial,BasicShader
+material=data/Cursor.ematerial,Cursor
+
+material.bundle=Buttons.materialbundle
+
+material=data/EchoLogoWithAlphaRejectTest.ematerial,EchoLogoWithAlphaRejectTest
+material=data/SpeechBox.ematerial,SpeechBox
+material=data/Particle.ematerial,Particle
+material=data/ShaderPoints.ematerial,ShaderPoints

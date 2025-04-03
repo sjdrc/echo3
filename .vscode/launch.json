@@ -1,0 +1,111 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "(gdb) RunUnitTests",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/build/RunUnitTests",
+			"args": ["--tc=WebSocketServer"],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				{
+					"description": "Enable all-exceptions",
+					"text": "catch throw",
+					"ignoreFailures": true
+				},
+				{
+					"description":  "Set Disassembly Flavor to Intel",
+					"text": "-gdb-set disassembly-flavor intel",
+					"ignoreFailures": true
+				}
+			]
+		},
+		{
+			"name": "(gdb) RunGraphicTests",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/build/RunGraphicTests",
+			"args": ["--tc=PBR"],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				// {
+				// 	"description": "Enable all-exceptions",
+				// 	"text": "catch throw",
+				// 	"ignoreFailures": true
+				// },
+				{
+					"description":  "Set Disassembly Flavor to Intel",
+					"text": "-gdb-set disassembly-flavor intel",
+					"ignoreFailures": true
+				}
+			]
+		},
+		{
+			"name": "(gdb) Launch evfsc",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/build/evfsc",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}/build",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				{
+					"description":  "Set Disassembly Flavor to Intel",
+					"text": "-gdb-set disassembly-flavor intel",
+					"ignoreFailures": true
+				}
+			]
+		},
+		{
+			"name": "(gdb) Launch LogServer",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/build/EchoLogServer",
+			"args": ["20154"],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}/build",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				{
+					"description":  "Set Disassembly Flavor to Intel",
+					"text": "-gdb-set disassembly-flavor intel",
+					"ignoreFailures": true
+				}
+			]
+		}
+	]
+}

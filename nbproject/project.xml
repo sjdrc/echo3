@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.cnd.makeproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/make-project/1">
+            <name>echo3</name>
+            <c-extensions/>
+            <cpp-extensions>cc,cpp</cpp-extensions>
+            <header-extensions>h</header-extensions>
+            <sourceEncoding>UTF-8</sourceEncoding>
+            <make-dep-projects/>
+            <sourceRootList>
+                <sourceRootElem>src</sourceRootElem>
+                <sourceRootElem>include</sourceRootElem>
+                <sourceRootElem>proto</sourceRootElem>
+                <sourceRootElem>src</sourceRootElem>
+                <sourceRootElem>include</sourceRootElem>
+                <sourceRootElem>proto</sourceRootElem>
+            </sourceRootList>
+            <confList>
+                <confElem>
+                    <name>Debug</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>Release</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>Wii</name>
+                    <type>3</type>
+                </confElem>
+                <confElem>
+                    <name>Android</name>
+                    <type>3</type>
+                </confElem>
+                <confElem>
+                    <name>Windows</name>
+                    <type>3</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
+        </data>
+        <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>itselffrom</word>
+        </spellchecker-wordlist>
+    </configuration>
+</project>

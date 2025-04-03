@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>include/Game.h</itemPath>
+      <itemPath>include/MyProjectApplication.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+      <logicalFolder name="Fonts" displayName="Fonts" projectFiles="true">
+        <itemPath>resources/Fonts/DejaVuSans.font</itemPath>
+        <itemPath>resources/Fonts/DejaVuSans.ttf</itemPath>
+        <itemPath>resources/Fonts/fonts.list</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Materials" displayName="Materials" projectFiles="true">
+        <itemPath>resources/Materials/Button.materialBundle</itemPath>
+        <itemPath>resources/Materials/Button.png</itemPath>
+        <itemPath>resources/Materials/Cursor.ematerial</itemPath>
+        <itemPath>resources/Materials/Divider.ematerial</itemPath>
+        <itemPath>resources/Materials/Divider.png</itemPath>
+        <itemPath>resources/Materials/Echo.ematerial</itemPath>
+        <itemPath>resources/Materials/EchoLogo.png</itemPath>
+        <itemPath>resources/Materials/EchoLogoInternalGlow.png</itemPath>
+        <itemPath>resources/Materials/EchoText.ematerial</itemPath>
+        <itemPath>resources/Materials/EchoText.png</itemPath>
+        <itemPath>resources/Materials/LightMap.png</itemPath>
+        <itemPath>resources/Materials/LitEchoLogo.ematerial</itemPath>
+        <itemPath>resources/Materials/Settings.png</itemPath>
+        <itemPath>resources/Materials/SettingsButton.materialBundle</itemPath>
+        <itemPath>resources/Materials/cursor.png</itemPath>
+        <itemPath>resources/Materials/materials.list</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Menu" displayName="Menu" projectFiles="true">
+        <itemPath>resources/Menu/HUD.gui</itemPath>
+        <itemPath>resources/Menu/Menu.gui</itemPath>
+        <itemPath>resources/Menu/Menus.list</itemPath>
+        <itemPath>resources/Menu/Settings.gui</itemPath>
+        <itemPath>resources/Menu/SuperMenu.gui</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>src/Game.cpp</itemPath>
+      <itemPath>src/MyProjectApplication.cpp</itemPath>
+      <itemPath>src/main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>resources/MyProject.config</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>include</Elem>
+    <Elem>src</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <incDir>
+            <pElem>${ECHO_ENGINE_INSTALL_DIR}/include</pElem>
+          </incDir>
+          <commandLine>${ECHO_VAR_DEBUG_C_COMPILE_OPTIONS}</commandLine>
+        </cTool>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>${ECHO_ENGINE_INSTALL_DIR}/include</pElem>
+            <pElem>${ECHO_ENGINE_INSTALL_DIR}/dependencies/opt/linux/include</pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <commandLine>${ECHO_VAR_DEBUG_CPP_COMPILE_OPTIONS}</commandLine>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerOptionItem>${ECHO_VAR_DEBUG_LIBS}</linkerOptionItem>
+          </linkerLibItems>
+          <commandLine>${ECHO_VAR_DEBUG_LIB_OPTIONS}</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="include/Game.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/MyProjectApplication.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Fonts/DejaVuSans.font" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Fonts/DejaVuSans.ttf" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Fonts/fonts.list" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/Button.materialBundle"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Button.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/Cursor.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Divider.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Divider.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/Echo.ematerial" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoLogo.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoLogoInternalGlow.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoText.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoText.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/LightMap.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/LitEchoLogo.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Settings.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/SettingsButton.materialBundle"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/cursor.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/materials.list" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/HUD.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/Menu.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/Menus.list" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/Settings.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/SuperMenu.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MyProjectApplication.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <commandLine>${ECHO_VAR_RELEASE_C_COMPILE_OPTIONS}</commandLine>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>8</standard>
+          <incDir>
+            <pElem>${ECHO_ENGINE_INSTALL_DIR}/include</pElem>
+            <pElem>${ECHO_ENGINE_INSTALL_DIR}/dependencies/opt/linux/include</pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <commandLine>${ECHO_VAR_RELEASE_CPP_COMPILE_OPTIONS}</commandLine>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerOptionItem>${ECHO_VAR_RELEASE_LIBS}</linkerOptionItem>
+          </linkerLibItems>
+          <commandLine>${ECHO_VAR_RELEASE_LIB_OPTIONS}</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="include/Game.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/MyProjectApplication.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Fonts/DejaVuSans.font" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Fonts/DejaVuSans.ttf" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Fonts/fonts.list" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/Button.materialBundle"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Button.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/Cursor.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Divider.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Divider.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/Echo.ematerial" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoLogo.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoLogoInternalGlow.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoText.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoText.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/LightMap.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/LitEchoLogo.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Settings.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/SettingsButton.materialBundle"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/cursor.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/materials.list" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/HUD.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/Menu.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/Menus.list" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/Settings.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/SuperMenu.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MyProjectApplication.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Wii" type="1">
+      <toolsSet>
+        <compilerSet>devkitPPC|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <commandLine>${ECHO_VAR_WII_C_COMPILE_OPTIONS}</commandLine>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>${ECHO_ENGINE_INSTALL_DIR}/include</pElem>
+            <pElem>${ECHO_ENGINE_INSTALL_DIR}/dependencies/opt/wii/include</pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <commandLine>${ECHO_VAR_WII_CPP_COMPILE_OPTIONS}</commandLine>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <stripSymbols>true</stripSymbols>
+          <linkerLibItems>
+            <linkerOptionItem>${ECHO_VAR_WII_LIBS}</linkerOptionItem>
+          </linkerLibItems>
+          <commandLine>${ECHO_VAR_WII_LIB_OPTIONS}</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="include/Game.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/MyProjectApplication.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Fonts/DejaVuSans.font" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Fonts/DejaVuSans.ttf" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Fonts/fonts.list" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/Button.materialBundle"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Button.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/Cursor.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Divider.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Divider.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/Echo.ematerial" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoLogo.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoLogoInternalGlow.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoText.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoText.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/LightMap.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/LitEchoLogo.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Settings.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/SettingsButton.materialBundle"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/cursor.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/materials.list" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/HUD.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/Menu.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/Menus.list" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/Settings.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/SuperMenu.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MyProjectApplication.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Android" type="3">
+      <toolsSet>
+        <compilerSet>Android_9|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <commandLine>${ECHO_VAR_ANDROID_C_COMPILE_OPTIONS}</commandLine>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>${ECHO_ENGINE_INSTALL_DIR}/include</pElem>
+            <pElem>${ECHO_ENGINE_INSTALL_DIR}/dependencies/opt/android/include</pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <commandLine>${ECHO_VAR_ANDROID_CPP_COMPILE_OPTIONS}</commandLine>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <archiverTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/libechoapplicationproject.a</output>
+        </archiverTool>
+      </compileType>
+      <packaging>
+        <packType>Tar</packType>
+        <output>${CND_DISTDIR}/${CND_CONF}/package/EchoApplicationProject.tar</output>
+        <packFileList>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}lib/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}lib/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}lib/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+        </packFileList>
+      </packaging>
+      <item path="include/Game.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/MyProjectApplication.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Fonts/DejaVuSans.font" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Fonts/DejaVuSans.ttf" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Fonts/fonts.list" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/Button.materialBundle"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Button.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/Cursor.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Divider.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Divider.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/Echo.ematerial" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoLogo.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoLogoInternalGlow.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoText.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoText.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/LightMap.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/LitEchoLogo.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Settings.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/SettingsButton.materialBundle"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/cursor.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/materials.list" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/HUD.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/Menu.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/Menus.list" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/Settings.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/SuperMenu.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MyProjectApplication.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Windows" type="1">
+      <toolsSet>
+        <compilerSet>Windows_Cross_Compiler|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <commandLine>${ECHO_VAR_WINDOWS_C_COMPILE_OPTIONS}</commandLine>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>${ECHO_ENGINE_INSTALL_DIR}/include</pElem>
+            <pElem>${ECHO_ENGINE_INSTALL_DIR}/dependencies/opt/windowscross/include</pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <commandLine>${ECHO_VAR_WINDOWS_CPP_COMPILE_OPTIONS}</commandLine>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/echoapplicationproject.exe</output>
+          <linkerLibItems>
+            <linkerOptionItem>${ECHO_VAR_WINDOWS_LIBS}</linkerOptionItem>
+          </linkerLibItems>
+          <commandLine>${ECHO_VAR_WINDOWS_LIB_OPTIONS}</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="include/Game.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/MyProjectApplication.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Fonts/DejaVuSans.font" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Fonts/DejaVuSans.ttf" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Fonts/fonts.list" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/Button.materialBundle"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Button.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/Cursor.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Divider.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Divider.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/Echo.ematerial" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoLogo.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoLogoInternalGlow.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoText.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/EchoText.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/LightMap.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/LitEchoLogo.ematerial"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/Settings.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/SettingsButton.materialBundle"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="resources/Materials/cursor.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Materials/materials.list" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/HUD.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/Menu.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/Menus.list" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/Settings.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/Menu/SuperMenu.gui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MyProjectApplication.cpp" ex="false" tool="1" flavor2="9">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="9">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

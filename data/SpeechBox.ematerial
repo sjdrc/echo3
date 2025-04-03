@@ -1,0 +1,11 @@
+{
+  "pass": [
+    {
+      "textureUnit": [
+        {
+          "image": "data/SpeechBox.png"
+        }
+      ]
+    }
+  ]
+}

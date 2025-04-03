@@ -1,0 +1,121 @@
+{
+  "cursor": {
+    "element": {
+      "type": "image",
+      "width": 0.1,
+      "sizeMode": "widthAndCalculateAspectRatio",
+      "imageProperties": {
+        "material": "Cursor"
+      }
+    },
+    "xAxis": "Mouse:X",
+    "yAxis": "Mouse:Y",
+    "button": "Mouse:Left"
+  },
+  "element": [
+    {
+      "type": "text",
+      "x": 0.5,
+      "y": 0.5,
+      "z": 1,
+      "width": 0.3,
+      "height": 0.1,
+      "textProperties": {
+        "text": "This is menu B",
+        "font": "TestFont"
+      }
+    },
+    {
+      "type": "button",
+      "x": 0.25,
+      "y": 0.75,
+      "width": 0.25,
+      "height": 0.25,
+      "releasedFunction": [
+        "Menu.Pop()"
+      ],
+      "buttonProperties": {
+        "idleMaterial": "Echo",
+        "pressedMaterial": "ButtonPressed",
+        "releasedMaterial": "ButtonReleased",
+        "hoverMaterial": "EchoInternalGlow"
+      },
+      "element": [
+        {
+          "type": "text",
+          "x": 0.5,
+          "y": 0.5,
+          "z": 1,
+          "width": 0.5,
+          "height": 0.15,
+          "textProperties": {
+            "text": "Back",
+            "font": "TestFont"
+          }
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "x": 0.75,
+      "y": 0.75,
+      "width": 0.25,
+      "height": 0.25,
+      "releasedFunction": [
+        "Menu.Push(MenuC)"
+      ],
+      "buttonProperties": {
+        "idleMaterial": "Echo",
+        "pressedMaterial": "ButtonPressed",
+        "releasedMaterial": "ButtonReleased",
+        "hoverMaterial": "EchoInternalGlow"
+      },
+      "element": [
+        {
+          "type": "text",
+          "x": 0.5,
+          "y": 0.5,
+          "z": 1,
+          "width": 0.5,
+          "height": 0.15,
+          "textProperties": {
+            "text": "Next",
+            "font": "TestFont"
+          }
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "x": 0.25,
+      "y": 0.25,
+      "width": 0.25,
+      "height": 0.25,
+      "pressedFunction": [
+        "GUI.SetVisible(TheText,false)"
+      ],
+      "releasedFunction": [
+        "GUI.SetVisible(TheText,true)"
+      ],
+      "buttonProperties": {
+        "idleMaterial": "Echo",
+        "pressedMaterial": "ButtonPressed",
+        "releasedMaterial": "ButtonReleased",
+        "hoverMaterial": "EchoInternalGlow"
+      }
+    },
+    {
+      "name": "TheText",
+      "type": "text",
+      "x": 0.75,
+      "y": 0.25,
+      "z": 1,
+      "width": 0.25,
+      "height": 0.25,
+      "textProperties": {
+        "text": "Some Text",
+        "font": "TestFont"
+      }
+    }
+  ]
+}

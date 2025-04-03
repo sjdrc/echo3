@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+	<folder name="CND">
+        <folder name="Tool">
+            <file name="GNU_tuned_flavor" url="toolchain/GNU_tuned_flavor.xml">
+                <attr name="extends" stringvalue="GNU_flavor"/>
+            </file>
+            <file name="GNU_tuned_cpp" url="toolchain/GNU_tuned_cpp.xml">
+                <attr name="extends" stringvalue="GNU_cpp"/>
+            </file>
+<!-- devkitPPC -->
+            <file name="devkitPPC_flavor" url="devkitppc/devkitPPC_flavor.xml">
+                <attr name="extends" stringvalue="GNU_flavor"/>
+            </file>
+            <file name="devkitPPC_c" url="devkitppc/devkitPPC_c.xml">
+                <attr name="extends" stringvalue="GNU_c"/>
+            </file>
+            <file name="devkitPPC_cpp" url="devkitppc/devkitPPC_cpp.xml">
+                <attr name="extends" stringvalue="GNU_cpp"/>
+            </file>
+            <file name="devkitPPC_assembler" url="devkitppc/devkitPPC_assembler.xml">
+                <attr name="extends" stringvalue="GNU_assembler"/>
+            </file>
+            <file name="devkitPPC_linker" url="devkitppc/devkitPPC_linker.xml">
+                <attr name="extends" stringvalue="GNU_linker"/>
+            </file>
+<!-- Android_19 -->
+            <file name="android19_flavor" url="android19/android19_flavor.xml">
+                <attr name="extends" stringvalue="GNU_flavor"/>
+            </file>
+            <file name="android19_c" url="android19/android19_c.xml">
+                <attr name="extends" stringvalue="GNU_c"/>
+            </file>
+            <file name="android19_cpp" url="android19/android19_cpp.xml">
+                <attr name="extends" stringvalue="GNU_cpp"/>
+            </file>
+            <file name="android19_assembler" url="android19/android19_assembler.xml">
+                <attr name="extends" stringvalue="GNU_assembler"/>
+            </file>
+            <file name="android19_linker" url="android19/android19_linker.xml">
+                <attr name="extends" stringvalue="GNU_linker"/>
+            </file>
+<!-- Windows_Cross_Compiler -->
+            <file name="windowscross_flavor" url="windowscross/windowscross_flavor.xml">
+                <attr name="extends" stringvalue="GNU_flavor"/>
+            </file>
+            <file name="windowscross_c" url="windowscross/windowscross_c.xml">
+                <attr name="extends" stringvalue="GNU_c"/>
+            </file>
+            <file name="windowscross_cpp" url="windowscross/windowscross_cpp.xml">
+                <attr name="extends" stringvalue="GNU_cpp"/>
+            </file>
+            <file name="windowscross_assembler" url="windowscross/windowscross_assembler.xml">
+                <attr name="extends" stringvalue="GNU_assembler"/>
+            </file>
+            <file name="windowscross_linker" url="windowscross/windowscross_linker.xml">
+                <attr name="extends" stringvalue="GNU_linker"/>
+            </file>
+		</folder>
+        <folder name="ToolChains">
+<!-- devkitPPC -->
+            <folder name="devkitPPC">
+                <attr name="position" intvalue="5000"/>
+                <attr name="SystemFileSystem.localizingBundle" stringvalue="au.com.emblem.echotoolchains.Bundle"/>
+                <file name="flavor.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/devkitPPC_flavor"/>
+                </file>
+                <file name="c.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/devkitPPC_c"/>
+                </file>
+                <file name="cpp.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/devkitPPC_cpp"/>
+                </file>
+                <file name="fortran.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_fortran"/>
+                </file>
+                <file name="assembler.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/devkitPPC_assembler"/>
+                </file>
+                <file name="scanner.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_scanner"/>
+                </file>
+                <file name="linker.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/devkitPPC_linker"/>
+                </file>
+                <file name="make.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_make"/>
+                </file>
+                <file name="debugger.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_debugger"/>
+                </file>
+                <file name="qmake.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_qmake"/>
+                </file>
+                <file name="cmake.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_cmake"/>
+                </file>
+            </folder>
+<!-- Android_19 -->
+            <folder name="Android_19">
+                <attr name="position" intvalue="5000"/>
+                <attr name="SystemFileSystem.localizingBundle" stringvalue="au.com.emblem.echotoolchains.Bundle"/>
+                <file name="flavor.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/android19_flavor"/>
+                </file>
+                <file name="c.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/android19_c"/>
+                </file>
+                <file name="cpp.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/android19_cpp"/>
+                </file>
+                <file name="fortran.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_fortran"/>
+                </file>
+                <file name="assembler.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/android19_assembler"/>
+                </file>
+                <file name="scanner.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_scanner"/>
+                </file>
+                <file name="linker.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/android19_linker"/>
+                </file>
+                <file name="make.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_make"/>
+                </file>
+                <file name="debugger.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_debugger"/>
+                </file>
+                <file name="qmake.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_qmake"/>
+                </file>
+                <file name="cmake.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_cmake"/>
+                </file>
+            </folder>
+<!-- Windows_Cross_Compiler -->
+            <folder name="Windows_Cross_Compiler">
+                <attr name="position" intvalue="5000"/>
+                <attr name="SystemFileSystem.localizingBundle" stringvalue="au.com.emblem.echotoolchains.Bundle"/>
+                <file name="flavor.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/windowscross_flavor"/>
+                </file>
+                <file name="c.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/windowscross_c"/>
+                </file>
+                <file name="cpp.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/windowscross_cpp"/>
+                </file>
+                <file name="fortran.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_fortran"/>
+                </file>
+                <file name="assembler.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/windowscross_assembler"/>
+                </file>
+                <file name="scanner.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_scanner"/>
+                </file>
+                <file name="linker.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/windowscross_linker"/>
+                </file>
+                <file name="make.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_make"/>
+                </file>
+                <file name="debugger.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_debugger"/>
+                </file>
+                <file name="qmake.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_qmake"/>
+                </file>
+                <file name="cmake.shadow">
+                    <attr name="originalFile" stringvalue="CND/Tool/GNU_cmake"/>
+                </file>
+            </folder>
+		</folder>
+    </folder>
+</filesystem>

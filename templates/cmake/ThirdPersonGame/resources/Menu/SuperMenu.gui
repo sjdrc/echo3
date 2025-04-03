@@ -1,0 +1,72 @@
+cursor
+{
+	element
+	{
+		z: 50;
+		type: IMAGE;
+		physical_width: "1cm";
+		size_mode: WIDTH_AND_CALCULATE_ASPECT_RATIO;
+		image_properties
+		{
+			material: "Cursor";
+		}
+	}
+	x_axis: "Mouse:X";
+	y_axis: "Mouse:Y";
+	button: "Mouse:Left";
+}
+
+element
+{
+	x: 0.25;
+	y: 0.9;
+	type: BUTTON;
+	physical_height: "1cm";
+	size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+	button_properties
+	{
+		idle_material: "ButtonIdle";
+		pressed_material: "ButtonPressed";
+		hover_material: "ButtonHover";
+	}
+	released_function: "State.Deactivate(Game)";
+	released_function: "State.Activate(Game)";
+	element
+	{
+		type: TEXT;
+		height: 0.5;
+		size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+		text_properties
+		{
+			text: "Pause";
+			font: "DejaVu";
+		}
+	}
+}
+
+element
+{
+	x: 0.75;
+	y: 0.9;
+	type: BUTTON;
+	physical_height: "1cm";
+	size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+	button_properties
+	{
+		idle_material: "ButtonIdle";
+		pressed_material: "ButtonPressed";
+		hover_material: "ButtonHover";
+	}
+	released_function: "State.Activate(Game)";
+	element
+	{
+		type: TEXT;
+		height: 0.5;
+		size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+		text_properties
+		{
+			text: "Resume";
+			font: "DejaVu";
+		}
+	}
+}

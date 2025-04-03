@@ -1,0 +1,13 @@
+{
+  "name": "NotoSansSinhala",
+  "filename": "NotoSansSinhala-Regular.ttf",
+  "pointSize": 16,
+  "xDpi": 300,
+  "yDpi": 300,
+  "range": [
+    {
+      "lowerCode": 3456,
+      "upperCode": 3572
+    }
+  ]
+}

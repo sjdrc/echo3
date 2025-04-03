@@ -1,0 +1,50 @@
+{
+  "pass": [
+    {
+      "lighting": false,
+      "cullMode": "none",
+      "textureUnit": [
+        {
+          "image": "green-shower-tile1_albedo.png"
+        },
+        {
+          "image": "green-shower-tile1_normal-ogl.png"
+        },
+        {
+          "image": "green-shower-tile1_metallic.png"
+        },
+        {
+          "image": "green-shower-tile1_roughness.png"
+        },
+        {
+          "image": "green-shower-tile1_ao.png"
+        },
+        {
+          "image": "green-shower-tile1_height.png"
+        }
+      ],
+      "program": {
+        "vertexShader": [
+          "PBR"
+        ],
+        "fragmentShader": [
+          "PBRParallax"
+        ],
+        "matrixVariable": "matViewProjection",
+        "cameraPositionVariable": "camPos",
+        "worldMatrix": "model",
+        "viewMatrix": "view",
+        "projectionMatrix": "projection",
+        "variable": [
+          "albedoMap Sampler(0)",
+          "normalMap Sampler(1)",
+          "metallicMap Sampler(2)",
+          "roughnessMap Sampler(3)",
+          "aoMap Sampler(4)",
+          "heightMap Sampler(5)",
+          "heightScale float(0.1)"
+        ]
+      }
+    }
+  ]
+}

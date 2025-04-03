@@ -1,0 +1,86 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Linux",
+			"type": "shell",
+			"command": "./build.sh",
+			"args": [
+				"linux"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"options": {
+				"cwd": "${workspaceFolder}"
+			}
+		},
+		{
+			"label": "Build Wii",
+			"type": "shell",
+			"command": "./build.sh",
+			"args": [
+				"wii"
+			],
+			"group": "build",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			}
+		},
+		{
+			"label": "Build Windows",
+			"type": "shell",
+			"command": "./build.sh",
+			"args": [
+				"windowscross"
+			],
+			"group": "build",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			}
+		},
+		{
+			"label": "Build Dependencies Linux",
+			"type": "shell",
+			"command": "sudo",
+			"args": [
+				"./edepbuild",
+				"linux"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"options": {
+				"cwd": "${workspaceFolder}/dependencies"
+			}
+		},
+		{
+			"label": "Build Dependencies Wii",
+			"type": "shell",
+			"command": "sudo",
+			"args": [
+				"./edepbuild",
+				"wii"
+			],
+			"group": "build",
+			"options": {
+				"cwd": "${workspaceFolder}/dependencies"
+			}
+		},
+		{
+			"label": "Build Dependencies Windows",
+			"type": "shell",
+			"command": "sudo",
+			"args": [
+				"./edepbuild",
+				"windowscross"
+			],
+			"group": "build",
+			"options": {
+				"cwd": "${workspaceFolder}/dependencies"
+			}
+		}
+	]
+}

@@ -1,0 +1,23 @@
+{
+  "pass": [
+    {
+      "blendMode": "transparent",
+      "cullMode": "back",
+      "lighting": false,
+      "vertexColour": false,
+      "depthWrite": true,
+      "depthCheck": true,
+      "diffuse": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "textureUnit": [
+        {
+          "image": "data/EchoLogo.png"
+        }
+      ]
+    }
+  ]
+}

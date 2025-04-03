@@ -1,0 +1,25 @@
+#!/bin/bash
+ECHO_PLATFORM=$1
+ECHO_DEP_SCRIPTS_DIR=dependencies/scripts
+
+if [ "${ECHO_ENGINE_INSTALL_DIR}" = "" ]; then
+	echo "Please specify the Echo install location:"
+	echo "You can avoid this prompt by setting ECHO_ENGINE_INSTALL_DIR"
+	read ECHO_ENGINE_INSTALL_DIR
+	if ! [ -d "${ECHO_ENGINE_INSTALL_DIR}" ]; then
+		echo "${ECHO_ENGINE_INSTALL_DIR} is not a directory"
+		exit 1;
+	fi
+else
+	echo "ECHO_ENGINE_INSTALL_DIR is: ${ECHO_ENGINE_INSTALL_DIR}"
+fi
+
+BUILD_FOLDER=build-${ECHO_PLATFORM}
+source ${ECHO_DEP_SCRIPTS_DIR}/${ECHO_PLATFORM}/${ECHO_PLATFORM}.config
+mkdir -p $BUILD_FOLDER
+cd $BUILD_FOLDER
+
+BUILD_TYPE=${2:-Release}
+echo "Build type: ${BUILD_TYPE}"
+cmake ${CMAKE_OPTIONS_PLATFORM} -DCMAKE_BUILD_TYPE="${BUILD_TYPE}" -DCMAKE_INSTALL_PREFIX="${ECHO_ENGINE_INSTALL_DIR}/${ECHO_PLATFORM}" -DECHO_TARGET_PLATFORM=$ECHO_PLATFORM ${@:2} ..
+

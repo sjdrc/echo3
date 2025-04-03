@@ -1,0 +1,8 @@
+#list youre material resources here
+material=Echo.ematerial,Echo
+material=EchoText.ematerial,EchoText
+material=LitEchoLogo.ematerial,LitEcho
+material=Cursor.ematerial,Cursor
+material=Divider.ematerial,Divider
+material.bundle=Button.materialBundle
+material.bundle=SettingsButton.materialBundle

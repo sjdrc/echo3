@@ -1,0 +1,23 @@
+pass
+{
+	blend_mode: TRANSPARENT
+	cull_mode: NONE
+	lighting: false
+	depth_write: true
+	depth_check: true
+	diffuse
+	{
+		r:1.0
+		g:1.0
+		b:1.0
+		a:1.0
+	}
+	texture_unit
+	{
+		image: "cursor.png"
+		wrap_u: CLAMP_TO_EDGE
+		wrap_v: CLAMP_TO_EDGE
+		min_filter: LINEAR
+		mag_filter: LINEAR
+	}
+}

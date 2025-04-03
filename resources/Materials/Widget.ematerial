@@ -1,0 +1,26 @@
+{
+  "pass": [
+    {
+      "lighting": true,
+      "cullMode": "back",
+      "blendMode": "transparent",
+      "depthWrite": true,
+      "depthCheck": true,
+      "diffuse": {
+        "r": 1,
+        "g": 1,
+        "b": 0,
+        "a": 1
+      },
+      "textureUnit": [
+        {
+          "image": "rustediron2/rustediron2_ao.png",
+          "wrapU": "clampToEdge",
+          "wrapV": "clampToEdge",
+          "minFilter": "linear",
+          "magFilter": "linear"
+        }
+      ]
+    }
+  ]
+}

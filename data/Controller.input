@@ -1,0 +1,28 @@
+{
+  "name": "Controller",
+  "analogue": [
+    {
+      "name": "StickA",
+      "source": [
+        "Keyboard:Left",
+        "Keyboard:Right"
+      ],
+      "value": [
+        -1.7,
+        2.4
+      ]
+    },
+    {
+      "name": "StickB",
+      "source": [
+        "Controller:StickA"
+      ]
+    }
+  ],
+  "digital": [
+    {
+      "name": "CA",
+      "source": "Keyboard:Space"
+    }
+  ]
+}

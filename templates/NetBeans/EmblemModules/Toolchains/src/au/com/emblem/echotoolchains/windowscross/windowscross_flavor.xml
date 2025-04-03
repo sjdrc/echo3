@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolchaindefinition xmlns="https://netbeans.org/ns/cnd-toolchain-definition/1">
+    <toolchain name="Windows_Cross_Compiler" display="Echo Windows Cross Compiler" family="GNU" qmakespec="${os}-i686-w64-mingw32-g++"/>
+    <platforms stringvalue="linux,unix,none"/>
+	<drive_letter_prefix stringvalue="/"/>
+    <base_folders>
+        <base_folder suffix="/usr/lib/gcc/i686-w64-mingw32/4.8/include"/>
+        <base_folder suffix="/usr/include/c++/4.8/i686-w64-mingw32"/>
+        <base_folder suffix="/usr/i686-w64-mingw32/include"/>
+	</base_folders>
+</toolchaindefinition>

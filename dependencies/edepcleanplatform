@@ -1,0 +1,25 @@
+#! /bin/bash
+
+echo "-====================================-"
+echo "Echo automated dependency platform clean script"
+echo "-====================================-"
+
+if [ "$1" = "" ] ; then
+	echo "You must specify a target platform."
+	echo ""
+	echo "$0 targetName"
+	echo ""
+	echo "This script cleans the default platform locations."
+	echo ""
+	echo "-====================================-"
+	exit 1;
+fi
+
+ECHO_PLATFORM=$1
+echo "Removing build/$ECHO_PLATFORM"
+rm -R "build/$ECHO_PLATFORM"
+echo "Removing opt/$ECHO_PLATFORM"
+rm -R "opt/$ECHO_PLATFORM"
+echo "Done"
+
+

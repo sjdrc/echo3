@@ -1,0 +1,50 @@
+{
+  "pass": [
+    {
+      "lighting": false,
+      "cullMode": "back",
+      "textureUnit": [
+        {
+          "image": "MATERIAL_albedo.png"
+        },
+        {
+          "image": "MATERIAL_normal-ogl.png"
+        },
+        {
+          "image": "MATERIAL_metallic.png"
+        },
+        {
+          "image": "MATERIAL_roughness.png"
+        },
+        {
+          "image": "MATERIAL_ao.png"
+        },
+        {
+          "image": "MATERIAL_height.png"
+        }
+      ],
+      "program": {
+        "vertexShader": [
+          "PBR"
+        ],
+        "fragmentShader": [
+          "PBRParallax"
+        ],
+        "matrixVariable": "matViewProjection",
+        "cameraPositionVariable": "camPos",
+        "worldMatrix": "model",
+        "viewMatrix": "view",
+        "projectionMatrix": "projection",
+        "variable": [
+          "albedoMap Sampler(0)",
+          "normalMap Sampler(1)",
+          "metallicMap Sampler(2)",
+          "roughnessMap Sampler(3)",
+          "aoMap Sampler(4)",
+          "heightMap Sampler(5)",
+          "heightScale float(0.1)"
+        ]
+      }
+    }
+  ]
+}

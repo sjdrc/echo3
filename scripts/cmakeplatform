@@ -1,0 +1,57 @@
+#! /bin/bash
+### -====================================-
+### Echo Platform cmake build
+### -====================================-
+###
+### This script will generate a cmake build folder for the specified target.
+###
+### You must specify the target string name.
+###
+### $0 platform [Release|Debug]
+###
+### Platform can be one of the following:
+
+function usage()
+{
+	sed -n 's/^### \?//p' "$0"
+	if ! [ "${ECHO_ENGINE_INSTALL_DIR}" = "" ]; then
+		cd ${ECHO_ENGINE_INSTALL_DIR}
+		for platform in *; do
+			if [ -d "${platform}" ] & [ "${platform}" != "scripts" ]; then
+				echo "    ${platform}"
+			fi
+		done
+	else
+		echo "ECHO_ENGINE_INSTALL_DIR is not set. Cannot detect platforms"
+	fi
+}
+
+if [ "$1" = "" ] ; then
+	usage
+	exit
+fi
+
+if [ "${ECHO_ENGINE_INSTALL_DIR}" = "" ]; then
+	echo "Please specify the Echo install location:"
+	echo "You can avoid this prompt by setting ECHO_ENGINE_INSTALL_DIR"
+	read ECHO_ENGINE_INSTALL_DIR
+	if ! [ -d "${ECHO_ENGINE_INSTALL_DIR}" ]; then
+		echo "${ECHO_ENGINE_INSTALL_DIR} is not a directory"
+		exit 1;
+	fi
+else
+	echo "ECHO_ENGINE_INSTALL_DIR is: ${ECHO_ENGINE_INSTALL_DIR}"
+fi
+
+ECHO_PLATFORM=${1}
+ECHO_BUILD_CONFIG="${ECHO_ENGINE_INSTALL_DIR}/${ECHO_PLATFORM}/config/${ECHO_PLATFORM}.config"
+BUILD_FOLDER=build-${ECHO_PLATFORM}
+echo "Build folder ${BUILD_FOLDER}"
+echo "Using configuration ${ECHO_BUILD_CONFIG}"
+source ${ECHO_BUILD_CONFIG}
+mkdir -p $BUILD_FOLDER
+cd $BUILD_FOLDER
+
+BUILD_TYPE=${2:-Release}
+echo "Build type: ${BUILD_TYPE}"
+cmake -DCMAKE_BUILD_TYPE="${BUILD_TYPE}" -DECHO_ENGINE_INSTALL_DIR=${ECHO_ENGINE_INSTALL_DIR} -DECHO_TARGET_PLATFORM=$ECHO_PLATFORM ${@:2} ..

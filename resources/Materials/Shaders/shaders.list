@@ -1,0 +1,3 @@
+fragment.shader=PBR.glsl,PBR
+fragment.shader=PBRParallax.glsl,PBRParallax
+vertex.shader=PBRVertex.glsl,PBR

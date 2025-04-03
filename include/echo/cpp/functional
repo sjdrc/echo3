@@ -1,0 +1,34 @@
+#ifndef ECHO_CPP_FUNCTIONAL
+#define ECHO_CPP_FUNCTIONAL
+#include <echo/Types.h>
+#ifdef ECHO_USE_BOOST_FOR_STANDARDS
+
+#include <boost/function.hpp>
+#include <boost/bind.hpp>
+
+namespace Echo
+{
+namespace function
+{
+	using boost::function;
+	using boost::bind;
+	using boost::arg;
+	using boost::ref;
+	namespace placeholders = boost::placeholders;
+}
+}
+
+#else
+
+#include <functional>
+
+namespace Echo
+{
+	using std::function;
+	using std::bind;
+	using std::ref;
+	namespace placeholders = std::placeholders;
+}
+
+#endif
+#endif

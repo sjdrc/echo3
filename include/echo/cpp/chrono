@@ -1,0 +1,33 @@
+#ifndef ECHO_CPP_CHRONO
+#define ECHO_CPP_CHRONO
+#include <echo/Types.h>
+#include <boost/chrono.hpp>
+// We want to always use boost::chrono because it has additional features from std::chrono such as io support
+
+namespace Echo
+{
+namespace chrono
+{
+	using namespace boost::chrono;
+}
+
+using boost::ratio;
+using boost::atto;
+using boost::femto;
+using boost::pico;
+using boost::nano;
+using boost::micro;
+using boost::milli;
+using boost::centi;
+using boost::deci;
+using boost::deca;
+using boost::hecto;
+using boost::kilo;
+using boost::mega;
+using boost::giga;
+using boost::tera;
+using boost::peta;
+using boost::exa;
+}
+
+#endif

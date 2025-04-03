@@ -1,0 +1,7 @@
+fragment.shader=data/BasicFragment.glsl,Basic
+vertex.shader=data/BasicVertex.glsl,Basic
+
+fragment.shader=data/ShaderPointsFragment.glsl,ShaderPoints
+vertex.shader=data/ShaderPointsVertex.glsl,ShaderPoints
+
+geometry.shader=data/ShaderPointsGeometry.glsl,ShaderPoints

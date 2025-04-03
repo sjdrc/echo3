@@ -1,0 +1,51 @@
+#! /bin/bash
+
+if [ "$1" = "" ] ; then
+TARGET_DIR=X
+else
+TARGET_DIR=$1
+fi
+
+#ECHO_DEPENDENCIES is set using the BUILD_ORDER variable in the platform build.config
+DEPS=$ECHO_DEPENDENCIES
+
+mkdir -p $TARGET_DIR
+cd $TARGET_DIR
+
+#Download any missing libraries and extract them. The libraries are missing if the tar.gz file and folder do not exist.
+echo "If a library folder or .tar.gz file already exists it will be skipped."
+for d in $DEPS; do
+	ECHO_CONFIG_FILE="$ECHO_DEP_SCRIPTS_DIR/$ECHO_PLATFORM/$ECHO_PLATFORM-$d.config"
+	unset DOWNLOAD_URL
+	unset ARCHIVE_NAME
+	source $ECHO_CONFIG_FILE
+	if [ -z ${DOWNLOAD_URL+x} ]; then
+		DOWNLOAD_URL="https://www.emblem.net.au/ed/$d.tar.gz"
+	fi
+	if [ -z {$ARCHIVE_NAME+x} ]; then
+		ARCHIVE_NAME=$d.tar.gz
+	fi
+	if [ ! -e ${ARCHIVE_NAME} ]; then
+		curl ${DOWNLOAD_URL} -o ${ARCHIVE_NAME}
+	else
+		echo "${ARCHIVE_NAME} exists. Download skipped."
+
+	# 	if [ ! -e "$d.tar.gz" ]; then
+	# 		wget https://www.emblem.net.au/ed/$d.tar.gz
+	# 		if ! [ $? -eq 0 ]; then
+	# 			echo "Error downloading $d.tar.gz"
+	# 			exit 1;
+	# 		fi
+	# 	else
+	# 		echo "File: $d.tar.gz exists - skipped download of $d.tar.gz."
+	# 	fi
+	# 	if ! [ $? -eq 0 ]; then
+	# 		echo "Error decompressing $d.tar.gz"
+	# 		exit 1;
+	# 	fi
+	# else
+	# 	echo "Folder: $d exists - skipped download and decompression."
+	fi
+done
+
+echo "Finished acquiring dependencies."

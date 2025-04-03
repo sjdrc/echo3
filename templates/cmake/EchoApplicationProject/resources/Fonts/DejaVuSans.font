@@ -1,0 +1,10 @@
+name: "DejaVu"
+filename: "DejaVuSans.ttf"
+point_size: 16;
+x_dpi: 150;
+y_dpi: 150;
+range
+{
+	lower_code: 33;
+	upper_code: 126;
+}

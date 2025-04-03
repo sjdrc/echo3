@@ -1,0 +1,3 @@
+#List your mesh resources here
+#mesh=SomePath/SomeFile.3ds,ResourceName
+#mesh=SomePath/SomeFile.mesh,ResourceName2

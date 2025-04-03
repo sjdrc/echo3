@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="20" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Main" tilewidth="32" tileheight="32">
+  <image source="TileMap.png" width="512" height="128"/>
+ </tileset>
+ <layer name="Back" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxTYWBgUKQSVgFiJSBWpRJWGjVv1LxR80bNGzWPauaBymhqlvcADE440Q==
+  </data>
+ </layer>
+ <layer name="Top" width="20" height="20">
+  <properties>
+   <property name="parallax.x" value="0.1"/>
+   <property name="parallax.y" value="0.1"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJy9lMsOwiAQRWdt3RC1PtdqrRufUevCT+un+KleEkgoMnSKpjc5ocNMhttSIOpfG6LXFCMH8rVbr7w4db1/SjWfaze39Gr9WOvgEdOqJe7qLwNDMDBjFvi+JdgL/Ul8VeAp9CfpZ9XF3wmcA1wCtRJ/fWsG5mBB7f7wz7Pny7IFBdiZOCbk31xuYsYbuIOHwB/XL3f6SaTX4fb1l/2NvW+KdL91YP7I1Ctm3krfaVf6viutRmAst5esDz9hFYk=
+  </data>
+ </layer>
+ <layer name="Items" width="20" height="20">
+  <properties>
+   <property name="parallax.x" value="0.2"/>
+   <property name="parallax.y" value="0.2"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYKA+MKeBmeQCdiLUMAExMxJmooK9rFCzWKlgFgiwQM1ioZJ5ww1wDrQDRgFRgGOgHUAlwAbBC6B0AxXMSwDiA0DsAKIpNY9eAAAW8wPn
+  </data>
+ </layer>
+ <imagelayer name="Wow" width="20" height="20" x="32" y="32" opacity="0.67">
+  <image source="cursor.png"/>
+ </imagelayer>
+ <objectgroup name="Object Layer 1" width="20" height="20">
+  <object name="The red" gid="2" x="450" y="510"/>
+  <object gid="7" x="126" y="332"/>
+ </objectgroup>
+</map>

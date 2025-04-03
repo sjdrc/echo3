@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "includePath": [
+                "${workspaceFolder}/include/**",
+                "${workspaceFolder}/build",
+                "${env:ECHO_ENGINE_INSTALL_DIR}/linux/include",
+                "${default}"
+            ]
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,44 @@
+{
+  "pass": [
+    {
+      "blendMode": "none",
+      "cullMode": "none",
+      "lighting": false,
+      "vertexColour": true,
+      "depthWrite": true,
+      "depthCheck": true,
+      "diffuse": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "textureUnit": [
+        {
+          "image": "data/EchoLogo.png"
+        }
+      ]
+    },
+    {
+      "blendMode": "transparent",
+      "cullMode": "none",
+      "lighting": false,
+      "vertexColour": false,
+      "depthWrite": true,
+      "depthCheck": true,
+      "alphaTestFunction": "greater",
+      "alphaTestValue": 0.5,
+      "diffuse": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "textureUnit": [
+        {
+          "image": "data/rotator.png"
+        }
+      ]
+    }
+  ]
+}

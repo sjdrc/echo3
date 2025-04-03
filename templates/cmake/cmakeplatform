@@ -1,0 +1,16 @@
+#! /bin/bash
+### Wrapper script around the installed Echo script that checks for the install directory.
+
+if [ "${ECHO_ENGINE_INSTALL_DIR}" = "" ]; then
+	echo "Please specify the Echo install location:"
+	echo "You can avoid this prompt by setting ECHO_ENGINE_INSTALL_DIR"
+	read ECHO_ENGINE_INSTALL_DIR
+	if ! [ -d "${ECHO_ENGINE_INSTALL_DIR}" ]; then
+		echo "${ECHO_ENGINE_INSTALL_DIR} is not a directory"
+		exit 1;
+	fi
+else
+	echo "ECHO_ENGINE_INSTALL_DIR is: ${ECHO_ENGINE_INSTALL_DIR}"
+fi
+
+${ECHO_ENGINE_INSTALL_DIR}/scripts/cmakeplatform $1 ${@:2}

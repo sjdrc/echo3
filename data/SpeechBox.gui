@@ -1,0 +1,147 @@
+{
+  "element": [
+    {
+      "type": "container",
+      "name": "TheImage",
+      "width": 0.5,
+      "height": 0.25,
+      "element": [
+        {
+          "type": "image",
+          "x": 0,
+          "y": 1,
+          "width": 0.025,
+          "height": 0.1,
+          "hAlign": "minimum",
+          "vAlign": "maximum",
+          "imageProperties": {
+            "material": "SpeechBox"
+          }
+        },
+        {
+          "type": "image",
+          "x": 0.5,
+          "y": 1,
+          "width": 0.95,
+          "height": 0.1,
+          "vAlign": "maximum",
+          "imageProperties": {
+            "material": "SpeechBox",
+            "minU": 0.5,
+            "maxU": 0.95
+          }
+        },
+        {
+          "type": "image",
+          "x": 1,
+          "y": 1,
+          "width": 0.025,
+          "height": 0.1,
+          "hAlign": "maximum",
+          "vAlign": "maximum",
+          "imageProperties": {
+            "material": "SpeechBox",
+            "flipHorizontally": 1
+          }
+        },
+        {
+          "type": "image",
+          "x": 0,
+          "y": 0.5,
+          "width": 0.025,
+          "height": 0.8,
+          "hAlign": "minimum",
+          "imageProperties": {
+            "material": "SpeechBox",
+            "minV": 0.5,
+            "maxV": 0.95
+          }
+        },
+        {
+          "type": "image",
+          "x": 0.5,
+          "y": 0.5,
+          "width": 0.95,
+          "height": 0.8,
+          "imageProperties": {
+            "material": "SpeechBox",
+            "minU": 0.5,
+            "minV": 0.5,
+            "maxU": 0.95,
+            "maxV": 0.95,
+            "flipHorizontally": 1
+          }
+        },
+        {
+          "type": "image",
+          "x": 1,
+          "y": 0.5,
+          "width": 0.025,
+          "height": 0.8,
+          "hAlign": "maximum",
+          "imageProperties": {
+            "material": "SpeechBox",
+            "minV": 0.5,
+            "maxV": 0.95,
+            "flipHorizontally": 1
+          }
+        },
+        {
+          "type": "image",
+          "x": 0,
+          "y": 0,
+          "width": 0.025,
+          "height": 0.1,
+          "hAlign": "minimum",
+          "vAlign": "minimum",
+          "imageProperties": {
+            "material": "SpeechBox",
+            "flipVertically": 1
+          }
+        },
+        {
+          "type": "image",
+          "x": 0.5,
+          "y": 0,
+          "width": 0.95,
+          "height": 0.1,
+          "vAlign": "minimum",
+          "imageProperties": {
+            "material": "SpeechBox",
+            "minU": 0.5,
+            "maxU": 0.95,
+            "flipVertically": 1
+          }
+        },
+        {
+          "type": "image",
+          "x": 1,
+          "y": 0,
+          "width": 0.025,
+          "height": 0.1,
+          "hAlign": "maximum",
+          "vAlign": "minimum",
+          "imageProperties": {
+            "material": "SpeechBox",
+            "flipHorizontally": 1,
+            "flipVertically": 1
+          }
+        },
+        {
+          "type": "textbox",
+          "name": "TextBox",
+          "x": 0.5,
+          "y": 0.5,
+          "z": 1,
+          "width": 0.95,
+          "height": 0.8,
+          "textboxProperties": {
+            "font": "NotoSans",
+            "text": "Hello world, this text is in a TextBox. To access this element so you can modify the contents from code call FindElement() on the root element.",
+            "lineSize": 0.15
+          }
+        }
+      ]
+    }
+  ]
+}

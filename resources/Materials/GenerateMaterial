@@ -1,0 +1,47 @@
+#!/bin/bash 
+MATERIAL_NAME=$1
+MATERIAL_NEW_NAME=$2
+MATERIALS_FILE=../materials.list
+
+if [ "${MATERIAL_NAME}" = "" ] ; then
+	echo "Texture folder name needs to be specified"
+	exit 1
+fi
+
+if [ "${MATERIAL_NEW_NAME}" != "" ] ; then
+	echo "Renaming folder ${MATERIAL_NAME} to ${MATERIAL_NEW_NAME}"
+	if [ ! -d ${MATERIAL_NEW_NAME} ] ; then
+		mv ${MATERIAL_NAME} ${MATERIAL_NEW_NAME}
+	else
+		echo "${MATERIAL_NEW_NAME} already exists. Continuing as target."
+	fi
+	MATERIAL_NAME=${MATERIAL_NEW_NAME}
+fi
+
+if [ ! -d ${MATERIAL_NAME} ] ; then
+	echo "${MATERIAL_NAME} does not exist. Please specify a folder containing the textures"
+	exit 1
+fi
+
+echo "Changing to ${MATERIAL_NAME}"
+cd ${MATERIAL_NAME}
+
+TEMPLATE=pbr-template.ematerial
+
+if [ -e ${MATERIAL_NAME}_height.* ] ; then
+	echo "${MATERIAL_NAME} has a height map. Using Parallax material template."
+	TEMPLATE=pbr-template-parallax.ematerial
+fi
+
+cp ../${TEMPLATE} ${MATERIAL_NAME}.ematerial
+
+sed -i "s/MATERIAL/${MATERIAL_NAME}/g" ${MATERIAL_NAME}.ematerial
+echo "Material generated ${MATERIAL_NAME}.ematerial"
+
+MATERIAL_ENTRY="material=${MATERIAL_NAME}/${MATERIAL_NAME}.ematerial,${MATERIAL_NAME}"
+if [ ! $(cat ${MATERIALS_FILE} | grep "${MATERIAL_ENTRY}") ] ; then
+	echo "Adding material to ${MATERIALS_FILE}"
+	echo "${MATERIAL_ENTRY}" >> ${MATERIALS_FILE}
+else
+	echo "Material entry already exists in ${MATERIALS_FILE}"
+fi

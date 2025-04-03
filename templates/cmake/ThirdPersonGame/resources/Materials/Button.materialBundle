@@ -1,0 +1,80 @@
+material
+{
+	name: "ButtonIdle";
+	pass
+	{
+		blend_mode: TRANSPARENT
+		cull_mode: NONE
+		lighting: false
+		depth_write: true
+		depth_check: true
+		diffuse
+		{
+			r:0.0706;
+			g:0.5412;
+			b:0.0706;
+			a:1.0
+		}
+		texture_unit
+		{
+			image: "Button.png"
+			wrap_u: CLAMP_TO_EDGE
+			wrap_v: CLAMP_TO_EDGE
+			min_filter: LINEAR
+			mag_filter: LINEAR
+		}
+	}
+}
+
+material
+{
+	name: "ButtonHover";
+	pass
+	{
+		blend_mode: TRANSPARENT
+		cull_mode: NONE
+		lighting: false
+		depth_write: true
+		depth_check: true
+		diffuse
+		{
+			s: "#bae581FF"
+		}
+		texture_unit
+		{
+			image: "Button.png"
+			wrap_u: CLAMP_TO_EDGE
+			wrap_v: CLAMP_TO_EDGE
+			min_filter: LINEAR
+			mag_filter: LINEAR
+		}
+	}
+}
+
+material
+{
+	name: "ButtonPressed";
+	pass
+	{
+		blend_mode: TRANSPARENT
+		cull_mode: NONE
+		lighting: false
+		depth_write: true
+		depth_check: true
+		diffuse
+		{
+			r:0.0706;
+			g:0.3412;
+			b:0.0706;
+			a:1.0
+		}
+		texture_unit
+		{
+			image: "Button.png"
+			wrap_u: CLAMP_TO_EDGE
+			wrap_v: CLAMP_TO_EDGE
+			min_filter: LINEAR
+			mag_filter: LINEAR
+		}
+	}
+}

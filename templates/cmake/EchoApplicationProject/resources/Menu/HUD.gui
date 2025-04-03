@@ -1,0 +1,114 @@
+cursor
+{
+	element
+	{
+		type: CONTAINER;
+	}
+	x_axis: "Mouse:X";
+	y_axis: "Mouse:Y";
+	button: "Mouse:Left";
+}
+
+element
+{
+	type: IMAGE;
+	x: 0.5;
+	y: 0.9;
+	z: 1;
+	physical_height: "1cm";
+	size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+	image_properties
+	{
+		material: "EchoText";
+	}
+}
+
+element
+{
+	type: TEXT;
+	x: 0.5;
+	y: 0.2;
+	z: 1;
+	physical_height: "0.8cm";
+	size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+	v_align: MAXIMUM;
+	text_properties
+	{
+		text: "Hello world";
+		font: "DejaVu";
+	}
+}
+
+element
+{
+	type: TEXT;
+	x: 0.25;
+	y: 0.05;
+	z: 1;
+	physical_height: "0.5cm";
+	size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+	text_properties
+	{
+		text: "Front";
+		font: "DejaVu";
+	}
+}
+
+element
+{
+	type: TEXT;
+	x: 0.75;
+	y: 0.05;
+	z: 1;
+	physical_height: "0.5cm";
+	size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+	text_properties
+	{
+		text: "Back";
+		font: "DejaVu";
+	}
+}
+
+element
+{
+	type: IMAGE;
+	x: 0.5;
+	y: 0.5;
+	z: -1;
+	physical_width: "0.25mm";
+	height: 1;
+	image_properties
+	{
+		material: "Divider";
+	}
+}
+
+element
+{
+	x: 0.5;
+	y: 0.02;
+	z: 10;
+	v_align: MINIMUM;
+	type: BUTTON;
+	physical_height: "0.75cm";
+	size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+	button_properties
+	{
+		idle_material: "ButtonIdle";
+		pressed_material: "ButtonPressed";
+		hover_material: "ButtonHover";
+	}
+	released_function: "State.Deactivate(Game)";
+	released_function: "State.Activate(Menu)";
+	element
+	{
+		type: TEXT;
+		height: 0.5;
+		size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+		text_properties
+		{
+			text: "Menu";
+			font: "DejaVu";
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+  "name": "TestFont",
+  "filename": "Nosifer-Regular.ttf",
+  "pointSize": 16,
+  "xDpi": 300,
+  "yDpi": 300,
+  "range": [
+    {
+      "lowerCode": 33,
+      "upperCode": 126
+    }
+  ]
+}

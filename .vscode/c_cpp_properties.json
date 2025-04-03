@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/include/**",
+                "/opt/echo3/linux/include/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang-11",
+            "cStandard": "c17",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+            "compilerArgs": [],
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            //"intelliSenseModeIsExplicit": true,
+            //"cStandardIsExplicit": true,
+            //"cppStandardIsExplicit": true,
+            //"compilerPathIsExplicit": true,
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/src/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

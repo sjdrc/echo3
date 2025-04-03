@@ -1,0 +1,13 @@
+#!/bin/bash
+ECHO_PLATFORM=${1}
+RESOURCE_TYPE=${2}
+DIRECTORY=${3}
+LOWERCASE_RESOURCE=$(echo "${RESOURCE_TYPE}" | awk '{print tolower($0)}')
+echo "Looking for resource files with extension e${LOWERCASE_RESOURCE} in ${DIRECTORY}"
+
+for f in $(find ${DIRECTORY} -name "*.e${LOWERCASE_RESOURCE}");
+do
+echo "Convert: ${f}"
+./echoConvertResource ${ECHO_PLATFORM} ${RESOURCE_TYPE} ${f} ${f}.bin
+done;
+

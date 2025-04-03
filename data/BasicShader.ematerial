@@ -1,0 +1,25 @@
+{
+  "pass": [
+    {
+      "lighting": false,
+      "cullMode": "none",
+      "textureUnit": [
+        {
+          "image": "data/EchoLogo.png"
+        },
+        {
+          "image": "data/EchoLogoInternalGlow.png"
+        }
+      ],
+      "program": {
+        "vertexShader": [
+          "Basic"
+        ],
+        "fragmentShader": [
+          "Basic"
+        ],
+        "matrixVariable": "matViewProjection"
+      }
+    }
+  ]
+}

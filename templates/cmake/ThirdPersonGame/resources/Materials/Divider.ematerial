@@ -1,0 +1,20 @@
+pass
+{
+	blend_mode: NONE
+	cull_mode: BACK
+	lighting: false
+	vertex_colour: false
+	depth_write: true
+	depth_check: true
+	diffuse
+	{
+		r:0.5
+		g:0.5
+		b:0.5
+		a:1.0
+	}
+	texture_unit
+	{
+		image: "Divider.png"
+	}
+}

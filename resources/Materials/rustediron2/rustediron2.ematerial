@@ -1,0 +1,45 @@
+{
+  "pass": [
+    {
+      "lighting": false,
+      "cullMode": "back",
+      "textureUnit": [
+        {
+          "image": "rustediron2_albedo.png"
+        },
+        {
+          "image": "rustediron2_normal-ogl.png"
+        },
+        {
+          "image": "rustediron2_metallic.png"
+        },
+        {
+          "image": "rustediron2_roughness.png"
+        },
+        {
+          "image": "rustediron2_ao.png"
+        }
+      ],
+      "program": {
+        "vertexShader": [
+          "PBR"
+        ],
+        "fragmentShader": [
+          "PBR"
+        ],
+        "matrixVariable": "matViewProjection",
+        "cameraPositionVariable": "camPos",
+        "worldMatrix": "model",
+        "viewMatrix": "view",
+        "projectionMatrix": "projection",
+        "variable": [
+          "albedoMap Sampler(0)",
+          "normalMap Sampler(1)",
+          "metallicMap Sampler(2)",
+          "roughnessMap Sampler(3)",
+          "aoMap Sampler(4)"
+        ]
+      }
+    }
+  ]
+}

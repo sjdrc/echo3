@@ -1,0 +1,3 @@
+#List your skeleton resources here
+#skeleton=SomePath/SomeFile.skeleton,ResourceName
+skeleton=resources/Characters/Kenji/Kenji_mesh.skeleton,Kenji_mesh.skeleton

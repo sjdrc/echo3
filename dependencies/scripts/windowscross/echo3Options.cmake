@@ -1,0 +1,16 @@
+# This file is for specifying options for this platform
+
+set(ECHO_UI_FRAMEWORK "Native")
+set(ECHO_AUDIO_SYSTEM "OpenAL")
+set(BUILD_WITH_OPENGL ON)
+set(BUILD_TESTS ON)
+set(BUILD_GRAPHICS_TESTS ON)
+set(BUILD_WITH_WEBSOCKETS OFF)
+set(BUILD_WITH_SOCKETS ON)
+set(BUILD_WITH_FREETYPE OFF)
+
+set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_LIST_DIR}/${ECHO_TARGET_PLATFORM}-toolchain.cmake")
+message("CMAKE_TOOLCHAIN_FILE " ${CMAKE_TOOLCHAIN_FILE})
+
+set(ZLIB_LIBRARY "${DEPS_ROOT}/lib/libzlib.dll.a")
+set(ZLIB_INCLUDE_DIR "${DEPS_ROOT}/include")

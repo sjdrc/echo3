@@ -1,0 +1,4 @@
+Manifest-Version: 1.1
+OpenIDE-Module: au.net.emblem.echotemplates
+OpenIDE-Module-Localizing-Bundle: au/net/emblem/echotemplates/application/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.5.9

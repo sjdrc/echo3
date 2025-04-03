@@ -1,0 +1,32 @@
+{
+  "pass": [
+    {
+      "cullMode": "none",
+      "vertexColour": true,
+      "lighting": true,
+      "depthWrite": true,
+      "depthCheck": true,
+      "diffuse": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "program": {
+        "vertexShader": [
+          "ShaderPoints"
+        ],
+        "geometryShader": [
+          "ShaderPoints"
+        ],
+        "fragmentShader": [
+          "ShaderPoints"
+        ],
+        "matrixVariable": "matViewProjection",
+        "variable": [
+          "pointSize 0.1"
+        ]
+      }
+    }
+  ]
+}

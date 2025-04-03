@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolchaindefinition xmlns="https://netbeans.org/ns/cnd-toolchain-definition/1">
+    <toolchain name="Android_19" display="Echo Android 19" family="GNU" qmakespec="${os}-arm-linux-androideabi-g++"/>
+    <platforms stringvalue="linux,unix,none"/>
+	<drive_letter_prefix stringvalue="/"/>
+    <default_locations>
+        <platform os="linux" directory="/opt/android/android-19/arm-linux-androideabi-4.9/bin"/>
+    </default_locations>
+    <base_folders>
+        <base_folder suffix="/opt/android/android-19/arm-linux-androideabi-4.9/bin"/>
+	</base_folders>
+	<command_folders>
+        <command_folder suffix="/opt/android/android-19/arm-linux-androideabi-4.9/bin"/>
+	</command_folders>
+</toolchaindefinition>

@@ -1,0 +1,27 @@
+name: "Controller"
+analogue
+{
+	name: "X"
+	source: "Keyboard:Left"
+	value: -1.0
+	source: "Keyboard:Right"
+	value: 1.0
+}
+analogue
+{
+	name: "Y"
+	source: "Keyboard:Up"
+	value: 1.0
+	source: "Keyboard:Down"
+	value: -1.0
+}
+digital
+{
+	name: "Jump"
+	source: "Keyboard:Space"
+}
+digital
+{
+	name: "Run"
+	source: "Keyboard:LShift"
+}

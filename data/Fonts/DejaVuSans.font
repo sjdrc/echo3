@@ -1,0 +1,29 @@
+{
+  "name": "DejaVu",
+  "filename": "DejaVuSans.ttf",
+  "pointSize": 16,
+  "xDpi": 300,
+  "yDpi": 300,
+  "range": [
+    {
+      "lowerCode": 33,
+      "upperCode": 126
+    },
+    {
+      "lowerCode": 8707,
+      "upperCode": 8707
+    },
+    {
+      "lowerCode": 8704,
+      "upperCode": 8704
+    },
+    {
+      "lowerCode": 8826,
+      "upperCode": 8826
+    },
+    {
+      "lowerCode": 65533,
+      "upperCode": 65533
+    }
+  ]
+}

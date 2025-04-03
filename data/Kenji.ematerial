@@ -1,0 +1,43 @@
+{
+  "pass": [
+    {
+      "blendMode": "none",
+      "cullMode": "back",
+      "lighting": true,
+      "depthWrite": true,
+      "depthCheck": true,
+      "depthFunction": "less",
+      "diffuse": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "textureUnit": [
+        {
+          "image": "data/tx_Kenji.png"
+        }
+      ]
+    },
+    {
+      "blendMode": "transparent",
+      "cullMode": "back",
+      "lighting": true,
+      "depthWrite": true,
+      "depthCheck": true,
+      "depthFunction": "lessOrEqual",
+      "diffuse": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "textureUnit": [
+        {
+          "image": "data/tx_Kenji_Face.png",
+          "textureCoordinateSet": 1
+        }
+      ]
+    }
+  ]
+}

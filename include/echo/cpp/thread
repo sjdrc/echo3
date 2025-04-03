@@ -1,0 +1,41 @@
+#ifndef ECHO_CPP_THREAD
+#define ECHO_CPP_THREAD
+#include <echo/Types.h>
+
+#ifdef ECHO_USE_BOOST_FOR_STANDARDS
+
+#include <boost/thread.hpp>
+#include <echo/cpp/chrono>
+
+namespace Echo
+{
+	using boost::thread;
+	using boost::condition_variable;
+	using boost::mutex;
+	typedef Seconds ThreadSeconds;
+namespace this_thread
+{
+	using namespace boost::this_thread;
+}
+}
+
+#else
+
+#include <thread>
+#include <condition_variable>
+#include <chrono>
+
+namespace Echo
+{
+	using std::thread;
+	using std::condition_variable;
+	using std::mutex;
+	typedef std::chrono::duration<double> ThreadSeconds;
+namespace this_thread
+{
+	using namespace std::this_thread;
+}
+}
+
+#endif
+#endif

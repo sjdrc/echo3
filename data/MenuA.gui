@@ -1,0 +1,196 @@
+{
+  "cursor": {
+    "element": {
+      "type": "image",
+      "width": 0.1,
+      "sizeMode": "widthAndCalculateAspectRatio",
+      "imageProperties": {
+        "material": "Cursor"
+      }
+    },
+    "xAxis": "Mouse:X",
+    "yAxis": "Mouse:Y",
+    "button": "Mouse:Left"
+  },
+  "element": [
+    {
+      "type": "text",
+      "x": 0.5,
+      "y": 0.75,
+      "z": 1,
+      "width": 0.3,
+      "height": 0.1,
+      "textProperties": {
+        "text": "Menu Test",
+        "font": "TestFont"
+      }
+    },
+    {
+      "type": "button",
+      "x": 0,
+      "y": 1,
+      "width": 0.1,
+      "aspectRatio": 1,
+      "name": "Exit button",
+      "releasedFunction": [
+        "Exit()"
+      ],
+      "hAlign": "minimum",
+      "vAlign": "maximum",
+      "sizeMode": "widthWithSetAspectRatio",
+      "buttonProperties": {
+        "idleMaterial": "Echo",
+        "pressedMaterial": "ButtonPressed",
+        "releasedMaterial": "ButtonReleased",
+        "hoverMaterial": "EchoInternalGlow"
+      },
+      "element": [
+        {
+          "type": "text",
+          "x": 0.5,
+          "y": 0.5,
+          "z": 1,
+          "width": 0.8,
+          "height": 0.8,
+          "textProperties": {
+            "text": "Exit!",
+            "font": "TestFont"
+          }
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "x": 0.1,
+      "y": 1,
+      "width": 0.1,
+      "aspectRatio": 1,
+      "name": "Reset time button",
+      "releasedFunction": [
+        "ResetTimeout()"
+      ],
+      "hAlign": "minimum",
+      "vAlign": "maximum",
+      "sizeMode": "widthWithSetAspectRatio",
+      "buttonProperties": {
+        "idleMaterial": "Echo",
+        "pressedMaterial": "ButtonPressed",
+        "releasedMaterial": "ButtonReleased",
+        "hoverMaterial": "EchoInternalGlow"
+      },
+      "element": [
+        {
+          "type": "text",
+          "x": 0.5,
+          "y": 0.5,
+          "z": 1,
+          "width": 0.8,
+          "height": 0.8,
+          "textProperties": {
+            "text": "Reset Time",
+            "font": "TestFont"
+          }
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "x": 0.5,
+      "y": 0.25,
+      "width": 0.5,
+      "height": 0.25,
+      "releasedFunction": [
+        "Menu.Push(MenuB)"
+      ],
+      "buttonProperties": {
+        "idleMaterial": "Echo",
+        "pressedMaterial": "ButtonPressed",
+        "releasedMaterial": "ButtonReleased",
+        "hoverMaterial": "EchoInternalGlow"
+      },
+      "element": [
+        {
+          "type": "text",
+          "x": 0.5,
+          "y": 0.5,
+          "z": 1,
+          "width": 0.5,
+          "height": 0.15,
+          "textProperties": {
+            "text": "Start",
+            "font": "TestFont"
+          }
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "x": 0.5,
+      "y": 0.05,
+      "width": 0.8,
+      "height": 0.1,
+      "imageProperties": {
+        "material": "Echo"
+      },
+      "element": [
+        {
+          "type": "text",
+          "x": 0.5,
+          "y": 0.5,
+          "z": 1,
+          "width": 0.25,
+          "hAlign": "minimum",
+          "sizeMode": "widthAndCalculateAspectRatio",
+          "textProperties": {
+            "text": "Left",
+            "font": "TestFont"
+          },
+          "element": [
+            {
+              "type": "text",
+              "x": 0.5,
+              "y": 0,
+              "z": 1,
+              "width": 0,
+              "height": 0.25,
+              "vAlign": "minimum",
+              "sizeMode": "heightAndCalculateAspectRatio",
+              "textProperties": {
+                "text": "Centre bottom",
+                "font": "TestFont"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "x": 0.5,
+          "y": 0.5,
+          "z": 1,
+          "width": 0.25,
+          "hAlign": "maximum",
+          "sizeMode": "widthAndCalculateAspectRatio",
+          "textProperties": {
+            "text": "Right",
+            "font": "TestFont"
+          },
+          "element": [
+            {
+              "type": "text",
+              "x": 0.5,
+              "y": 1,
+              "z": 1,
+              "height": 0.5,
+              "vAlign": "maximum",
+              "sizeMode": "heightAndCalculateAspectRatio",
+              "textProperties": {
+                "text": "Centre top",
+                "font": "TestFont"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

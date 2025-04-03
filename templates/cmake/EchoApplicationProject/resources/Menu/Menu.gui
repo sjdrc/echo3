@@ -1,0 +1,131 @@
+cursor
+{
+	element
+	{
+		z: 50;
+		type: IMAGE;
+		physical_width: "1cm";
+		size_mode: WIDTH_AND_CALCULATE_ASPECT_RATIO;
+		image_properties
+		{
+			material: "Cursor";
+		}
+	}
+	x_axis: "Mouse:X";
+	y_axis: "Mouse:Y";
+	button: "Mouse:Left";
+}
+
+element
+{
+	type: IMAGE;
+	x: 0.5;
+	y: 0.8;
+	z: 1;
+	physical_height: "2cm";
+	size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+	image_properties
+	{
+		material: "EchoText";
+	}
+}
+
+element
+{
+	type: LAYOUT;
+	x: 0.5;
+	y: 0.2;
+	z: 1;
+	height: 0.2;
+	size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+	v_align: MINIMUM;
+	layout_properties
+	{
+		direction: VERTICAL_MAX_TO_MIN;
+		placement_mode: ALLOW_OVERFLOW;
+		use_optimal_settings: true;
+	}
+	element
+	{
+		type: BUTTON;
+		physical_height: "1.5cm";
+		size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+		button_properties
+		{
+			idle_material: "ButtonIdle";
+			pressed_material: "ButtonPressed";
+			hover_material: "ButtonHover";
+		}
+		released_function: "State.Deactivate(Menu)";
+		released_function: "State.Activate(Game)";
+		element
+		{
+			type: TEXT;
+			height: 0.5;
+			size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+			text_properties
+			{
+				text: "Start";
+				font: "DejaVu";
+			}
+		}
+	}
+	element
+	{
+		type: BUTTON;
+		physical_height: "1.5cm";
+		size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+		button_properties
+		{
+			idle_material: "ButtonIdle";
+			pressed_material: "ButtonPressed";
+			hover_material: "ButtonHover";
+		}
+		released_function: "Application.Exit()";
+		element
+		{
+			type: TEXT;
+			height: 0.5;
+			size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+			text_properties
+			{
+				text: "Exit";
+				font: "DejaVu";
+			}
+		}
+	}
+}
+
+element
+{
+	type: BUTTON;
+	physical_height: "0.75cm";
+	size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+	x: 0.01;
+	y: 0.01;
+	h_align: MINIMUM;
+	v_align: MINIMUM;
+	button_properties
+	{
+		idle_material: "SettingsIdle";
+		pressed_material: "SettingsPressed";
+		hover_material: "SettingsHover";
+	}
+	released_function: "Menu.Push(Settings)";
+}
+
+element
+{
+	type: TEXT;
+	x: 0.5;
+	y: 0.1;
+	z: 1;
+	physical_height: "0.5cm";
+	size_mode: HEIGHT_AND_CALCULATE_ASPECT_RATIO;
+	v_align: MAXIMUM;
+	text_properties
+	{
+		text: "www.emblem.net.au";
+		font: "DejaVu";
+	}
+}

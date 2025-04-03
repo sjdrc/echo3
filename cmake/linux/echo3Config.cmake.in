@@ -1,0 +1,84 @@
+include(CMakeFindDependencyMacro)
+
+find_dependency(Boost REQUIRED chrono date_time filesystem random regex system thread timer)
+find_dependency(Box2D CONFIG REQUIRED)
+find_dependency(CapnProto CONFIG REQUIRED)
+find_dependency(utf8cpp CONFIG REQUIRED)
+find_dependency(websocketpp CONFIG REQUIRED)
+
+if(@BUILD_WITH_EFSW@)
+	find_dependency(efsw CONFIG REQUIRED)
+endif()
+
+if (NOT PkgConfig_FOUND)
+	find_dependency(PkgConfig REQUIRED)
+endif ()
+pkg_check_modules(bullet REQUIRED IMPORTED_TARGET bullet)
+if (@BUILD_WITH_FREETYPE@)
+	pkg_check_modules(freetype2 REQUIRED IMPORTED_TARGET freetype2)
+endif()
+if (@BUILD_WITH_OPENGL@)
+	find_dependency(glew CONFIG REQUIRED)
+endif()
+if (@BUILD_WITH_JPEG@)
+	pkg_check_modules(libjpeg REQUIRED IMPORTED_TARGET libjpeg)
+endif ()
+pkg_check_modules(libmodplug REQUIRED IMPORTED_TARGET libmodplug)
+pkg_check_modules(libpng REQUIRED IMPORTED_TARGET libpng)
+if (@BUILD_WITH_SSL@)
+	pkg_check_modules(libssl REQUIRED IMPORTED_TARGET libssl)
+	pkg_check_modules(libcrypto REQUIRED IMPORTED_TARGET libcrypto)
+	pkg_check_modules(libtls REQUIRED IMPORTED_TARGET libtls)
+endif ()
+pkg_check_modules(ogg REQUIRED IMPORTED_TARGET ogg)
+pkg_check_modules(tmxparser REQUIRED IMPORTED_TARGET tmxparser)
+pkg_check_modules(vorbis REQUIRED IMPORTED_TARGET vorbis)
+pkg_check_modules(vorbisfile REQUIRED IMPORTED_TARGET vorbisfile)
+pkg_check_modules(zlib REQUIRED IMPORTED_TARGET zlib)
+
+if (@ECHO_QT_UI_FRAMEWORK@)
+	find_dependency(Qt5 CONFIG REQUIRED Core Gui OpenGL)
+endif()
+
+if (@ECHO_OPENAL_AUDIO_SYSTEM@)
+	find_dependency(OpenAL CONFIG REQUIRED)
+endif()
+
+if (@ECHO_GTK_UI_FRAMEWORK@)
+	pkg_check_modules(gtkmm REQUIRED IMPORTED_TARGET gtkmm-2.4)
+	pkg_check_modules(gtkglextmm REQUIRED IMPORTED_TARGET gtkglextmm-1.2)
+	set(ECHO_GTK_UI_FRAMEWORK TRUE)
+	pkg_check_modules(x11 REQUIRED IMPORTED_TARGET x11)
+endif()
+
+include("${CMAKE_CURRENT_LIST_DIR}/echo3Targets.cmake")
+
+#Function to build a VFS
+function(Echo3BuildVFS directory target)
+	add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/echo.vfs
+		WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
+		COMMAND ${ECHO_ENGINE_INSTALL_DIR}/linux/bin/evfsc ${CMAKE_CURRENT_BINARY_DIR}/echo.vfs ${directory}
+		COMMENT "Generating Echo Virtual File System Binary from: ${ECHO_VFS_DIR}"
+	)
+
+	if(${ARGC} GREATER 1)
+		add_custom_command(
+			OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/echo.vfs.o
+			DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/echo.vfs
+			COMMAND $ENV{DEVKITPPC}/bin/powerpc-eabi-ld -r -b binary echo.vfs -o echo.vfs.o
+			WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+			COMMENT "Building Echo Virtual File System Object")
+
+		add_custom_target (
+			EchoVFS ALL
+			DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/echo.vfs.o
+			)
+		add_dependencies(${target} EchoVFS)
+	endif()
+endfunction()
+
+function(Echo3TargetPlatformConfig target)
+	if(ECHO_VFS_DIR)
+		Echo3BuildVFS(${ECHO_VFS_DIR} ${target})
+	endif()
+endfunction()

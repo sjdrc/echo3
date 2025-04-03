@@ -1,0 +1,26 @@
+echo "Copying ${TEMPLATE_DIR}/CMakeLists.txt to $(pwd)"
+cp ${TEMPLATE_DIR}/CMakeLists.txt .
+echo "Copying ${TEMPLATE_DIR}/cmakeplatform to $(pwd)"
+cp ${TEMPLATE_DIR}/cmakeplatform .
+cp ${TEMPLATE_DIR}/buildplatform .
+cp ${TEMPLATE_DIR}/runplatform .
+sed -i -e "s/MyProjectApplication/${PROJECT_NAME}/g" CMakeLists.txt
+sed -i -e "s/MyProjectApplication/${PROJECT_NAME}/g" runplatform
+
+echo "Renaming files"
+mv src/MyProjectApplication.cpp src/${PROJECT_NAME}.cpp
+mv include/MyProjectApplication.h include/${PROJECT_NAME}.h
+mv resources/MyProjectApplication.config resources/${PROJECT_NAME}.config
+
+for f in src/*; do
+	sed -i -e "s/MyProjectApplication/${PROJECT_NAME}/g" $f
+done
+
+for f in include/*; do
+	sed -i -e "s/MyProjectApplication/${PROJECT_NAME}/g" $f
+done
+
+echo "Configuring .vscode/launch.json"
+sed -i -e "s/MyProjectApplication/${PROJECT_NAME}/g" vscode/launch.json
+
+mv vscode .vscode

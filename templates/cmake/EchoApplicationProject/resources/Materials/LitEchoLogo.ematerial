@@ -1,0 +1,40 @@
+pass
+{
+	blend_mode: NONE
+	cull_mode: BACK
+	lighting: true
+	vertex_colour: true
+	depth_write: true
+	depth_check: true
+	diffuse
+	{
+		r:1.0
+		g:1.0
+		b:1.0
+		a:1.0
+	}
+	texture_unit
+	{
+		image: "EchoLogo.png"
+	}
+}
+pass
+{
+	blend_mode: ADDITIVE
+	cull_mode: NONE
+	lighting: true
+	vertex_colour: false
+	depth_write: true
+	depth_check: true
+	diffuse
+	{
+		r:1.0
+		g:1.0
+		b:0.0
+		a:1.0
+	}
+	texture_unit
+	{
+		image: "EchoLogoInternalGlow.png"
+	}
+}

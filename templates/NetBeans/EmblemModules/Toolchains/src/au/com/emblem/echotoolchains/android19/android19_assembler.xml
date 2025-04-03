@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolchaindefinition xmlns="https://netbeans.org/ns/cnd-toolchain-definition/1">
+	<assembler>
+		<compiler name="arm-linux-androideabi-as"/>
+	</assembler>
+</toolchaindefinition>

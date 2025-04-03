@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolchaindefinition xmlns="https://netbeans.org/ns/cnd-toolchain-definition/1">
+    <toolchain name="devkitPPC" display="Echo devkitPPC" family="GNU" qmakespec="${os}-powerpc-eabi-g++"/>
+    <platforms stringvalue="linux,unix,none"/>
+	<drive_letter_prefix stringvalue="/"/>
+    <default_locations>
+        <platform os="linux" directory="/opt/devkitPro/devkitPPC/bin"/>
+    </default_locations>
+    <base_folders>
+        <base_folder suffix="/opt/devkitPro/devkitPPC/bin"/>
+	</base_folders>
+	<command_folders>
+        <command_folder suffix="/opt/devkitPro/devkitPPC/bin"/>
+	</command_folders>
+</toolchaindefinition>
